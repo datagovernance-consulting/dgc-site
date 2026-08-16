@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datagovernance-consulting.github.io/dgc-site/sitemap.xml
