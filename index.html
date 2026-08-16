@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Governance &amp; Compliance Consulting LLC</title>
+<meta property="og:title" content="Data Governance &amp; Compliance Consulting LLC">
+<meta property="og:description" content="Privacy, AI governance, procurement risk, and data retention — made clear and practical. Consulting and advisory services, not legal representation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://datagovernance-consulting.github.io/dgc-site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --paper:#F6F5F1;
+    --slate:#5B6470;
+    --gold:#B78A34;
+    --verdigris:#3B6E63;
+    --line:#D8D3C7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 220px;
+    gap:48px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--verdigris);
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px;height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  h1{
+    font-family:'Newsreader',serif;
+    font-weight:500;
+    font-size:clamp(34px,4.6vw,50px);
+    line-height:1.12;
+    letter-spacing:-.01em;
+    max-width:640px;
+  }
+  h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--verdigris);
+  }
+  .subhead{
+    margin-top:22px;
+    max-width:520px;
+    font-size:17px;
+    color:var(--slate);
+  }
+  .cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    background:var(--ink);
+    color:var(--paper);
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    border-radius:2px;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:var(--verdigris);}
+  .rate-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--slate);
+    border:1px solid var(--line);
+    padding:11px 16px;
+    border-radius:2px;
+  }
+  .rate-tag b{color:var(--ink);font-weight:500;}
+
+  /* ---------- SEAL ---------- */
+  .seal-holder{display:flex;justify-content:center;}
+  .seal{width:190px;height:190px;}
+  .seal-ring-outer{fill:none;stroke:var(--ink);stroke-width:1;}
+  .seal-ring-inner{fill:none;stroke:var(--gold);stroke-width:1.4;}
+  .seal-text{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9.6px;
+    letter-spacing:.06em;
+    fill:var(--ink);
+  }
+  .seal-monogram{
+    font-family:'Newsreader',serif;
+    font-size:32px;
+    font-weight:500;
+    letter-spacing:.01em;
+    fill:var(--ink);
+  }
+  .seal-sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:8px;
+    letter-spacing:.14em;
+    fill:var(--verdigris);
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:64px 0;border-top:1px solid var(--line);}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:16px;
+  }
+  h2{
+    font-family:'Newsreader',serif;
+    font-weight:500;
+    font-size:28px;
+    max-width:560px;
+    margin-bottom:36px;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service{
+    background:var(--paper);
+    padding:28px 26px;
+  }
+  .service .num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--gold);
+    margin-bottom:12px;
+    display:block;
+  }
+  .service h3{
+    font-family:'Newsreader',serif;
+    font-weight:500;
+    font-size:19px;
+    margin-bottom:10px;
+  }
+  .service p{font-size:14.5px;color:var(--slate);}
+  .service p b{color:var(--ink);font-weight:600;}
+
+  /* ---------- TRACK RECORD ---------- */
+  .timeline{
+    border-left:1px solid var(--line);
+    margin-left:6px;
+  }
+  .tl-item{
+    position:relative;
+    padding:0 0 34px 32px;
+  }
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:'';
+    position:absolute;
+    left:-5px;top:4px;
+    width:9px;height:9px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--verdigris);
+  }
+  .tl-role{
+    font-family:'Newsreader',serif;
+    font-weight:500;
+    font-size:18px;
+    margin-bottom:4px;
+  }
+  .tl-org{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--gold);
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .tl-desc{font-size:14.5px;color:var(--slate);max-width:560px;}
+
+  /* ---------- CREDENTIALS ---------- */
+  .cred-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .cred{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:9px 16px;
+    border:1px solid var(--ink);
+    border-radius:2px;
+    letter-spacing:.02em;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--ink);
+    color:var(--paper);
+    border-top:none;
+  }
+  .contact .kicker{color:var(--gold);}
+  .contact h2{color:var(--paper);}
+  .contact-note{
+    font-size:14.5px;
+    color:#C9CCD6;
+    max-width:520px;
+    margin-bottom:30px;
+  }
+  .contact .btn{background:var(--gold);color:var(--ink);}
+  .contact .btn:hover{background:var(--paper);}
+  .contact-alt{
+    margin-top:16px;
+    font-size:14px;
+    color:#9AA2B4;
+  }
+  .contact-alt a{color:#E8E6DD;text-decoration:underline;}
+  .disclaimer{
+    margin-top:40px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:#8A93A6;
+    letter-spacing:.02em;
+    border-top:1px solid rgba(255,255,255,.14);
+    padding-top:22px;
+    max-width:600px;
+  }
+
+  footer{
+    padding:26px 0 40px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:#8A93A6;
+    background:var(--ink);
+    display:flex;
+    justify-content:space-between;
+  }
+
+  @media (max-width:680px){
+    .hero-grid{grid-template-columns:1fr;}
+    .seal-holder{order:-1;margin-bottom:8px;}
+    .seal{width:130px;height:130px;}
+    .services-grid{grid-template-columns:1fr;}
+    footer{flex-direction:column;gap:6px;}
+  }
+
+  @media (prefers-reduced-motion:no-preference){
+    .fade-in{
+      animation:fadeUp .6s ease both;
+    }
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(10px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  }
+
+  :focus-visible{outline:2px solid var(--verdigris);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="fade-in">
+      <div class="eyebrow">Data Governance &amp; Compliance Consulting LLC</div>
+      <h1>The compliance function most companies can't staff full-time — <em>made clear and practical.</em></h1>
+      <p class="subhead">Enterprise legal executive with 20+ years building and running global privacy and AI compliance programs. Available for select consulting and advisory engagements — not legal representation.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:hello.dgcconsulting@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a free 15-min consultation →</a>
+        <span class="rate-tag">Hourly from <b>$350/hr</b> · flat-fee startup packages from <b>$3,000</b></span>
+      </div>
+    </div>
+    <div class="seal-holder">
+      <svg class="seal" viewBox="0 0 200 200">
+        <circle class="seal-ring-outer" cx="100" cy="100" r="96"/>
+        <circle class="seal-ring-inner" cx="100" cy="100" r="82"/>
+        <circle class="seal-ring-outer" cx="100" cy="100" r="80"/>
+        <defs>
+          <path id="circlePath" d="M 100,100 m -68,0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0"/>
+        </defs>
+        <text class="seal-text">
+          <textPath href="#circlePath" startOffset="2%">JD · CIPP/US · CIPP/E · CIPM · AIGP · DPO · JD · CIPP/US · CIPP/E · CIPM · AIGP · DPO ·</textPath>
+        </text>
+        <text class="seal-monogram" x="100" y="108" text-anchor="middle">DGC</text>
+        <text class="seal-sub" x="100" y="128" text-anchor="middle">EST. 2024</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2>Six areas of practical, hands-on advisory work.</h2>
+    <div class="services-grid">
+      <div class="service">
+        <span class="num">01</span>
+        <h3>AI Governance &amp; Compliance</h3>
+        <p>Risk classification, review workflows, and legal guardrails for generative AI and ML deployment — aligned to the EU AI Act and emerging U.S. state frameworks.</p>
+      </div>
+      <div class="service">
+        <span class="num">02</span>
+        <h3>Data Privacy Programs</h3>
+        <p>Enterprise privacy architecture across GDPR, CCPA/CPRA, HIPAA, and GLBA — built for scale, audited for readiness.</p>
+      </div>
+      <div class="service">
+        <span class="num">03</span>
+        <h3>Procurement &amp; Vendor Risk</h3>
+        <p>Guidance on procurement and vendor risk strategy — including what contractual and DPA terms should be in place — with privacy-by-design built into your vendor risk framework.</p>
+      </div>
+      <div class="service">
+        <span class="num">04</span>
+        <h3>Product Compliance Architecture</h3>
+        <p>Embedding regulatory and risk guardrails directly into product and engineering workflows, before launch — not after.</p>
+      </div>
+      <div class="service">
+        <span class="num">05</span>
+        <h3>Privacy Policies &amp; Terms of Service</h3>
+        <p>Drafting privacy policies and terms of service tailored to your site's data practices, built on established compliance frameworks — reviewed by your counsel before publication. Flat-fee startup package: <b>$3,000</b> for both documents, typical 10-business-day turnaround. Cookie policy available as an add-on from <b>$500</b>. Larger or multi-jurisdiction projects scoped individually.</p>
+      </div>
+      <div class="service">
+        <span class="num">06</span>
+        <h3>Data Retention &amp; Disposition</h3>
+        <p>Building defensible data retention schedules and disposition programs — including legacy records decommissioning and large-scale, system-wide retention governance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Track Record</div>
+    <h2>More than two decades in the room where these decisions get made.</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-role">Senior Legal Executive — Privacy, AI &amp; Product Compliance</div>
+        <div class="tl-org">Global Enterprise Software Company</div>
+        <div class="tl-desc">Designs and leads a generative AI and machine learning legal compliance framework at the executive level.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Global Chief Privacy Officer &amp; DPO</div>
+        <div class="tl-org">Fortune 500 Insurance Brokerage</div>
+        <div class="tl-desc">Led global privacy strategy for insurance, financial, and healthcare records; ran privacy due diligence for dozens of corporate acquisitions annually.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Corporate Counsel — Product &amp; Technology</div>
+        <div class="tl-org">Global Logistics &amp; Technology Company</div>
+        <div class="tl-desc">Advised on AI-powered safety systems and privacy-by-design compliance across product rollouts in eight countries.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Litigation, Data Privacy &amp; eDiscovery Counsel</div>
+        <div class="tl-org">National Law Firms</div>
+        <div class="tl-desc">Advised Fortune 100/500 clients on complex data mapping, incident management, and multi-agency government investigations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Credentials</div>
+    <h2>Trained at AmLaw 100 firms and Fortune 500 companies. Certified across privacy, AI, and data governance.</h2>
+    <div class="cred-row">
+      <span class="cred">J.D., Order of the Coif</span>
+      <span class="cred">CIPP/US</span>
+      <span class="cred">CIPP/E</span>
+      <span class="cred">CIPM</span>
+      <span class="cred">AIGP</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="kicker">Get in touch</div>
+    <h2>Bring a specific problem. Leave with a practical plan.</h2>
+    <p class="contact-note">Best fit for growth-stage companies navigating AI governance, privacy compliance, or procurement risk who need senior expertise without a full-time hire — and for early-stage startups needing foundational privacy documentation done right, without enterprise-scale cost.</p>
+    <a class="btn" href="mailto:hello.dgcconsulting@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a free 15-min consultation →</a>
+    <p class="contact-alt">Prefer to just send details? Email <a href="mailto:hello.dgcconsulting@gmail.com">hello.dgcconsulting@gmail.com</a> directly.</p>
+    <p class="disclaimer">Data Governance &amp; Compliance Consulting LLC provides business advisory and consulting services. This engagement does not constitute legal representation, and no attorney-client relationship is formed through this site or any engagement arising from it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;">
+    <span>© 2026 Data Governance &amp; Compliance Consulting LLC</span>
+    <span>Chicago, IL</span>
+  </div>
+</footer>
+
+</body>
+</html>
